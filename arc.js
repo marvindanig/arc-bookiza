@@ -1,8 +1,8 @@
-function arc(){
+function arc(location){
   const path = require('path');
   const fs = require('fs');
 
-  return JSON.parse(fs.readFileSync(path.join(__dirname, '..', '.bookizarc')).toString());
+  return JSON.parse(fs.readFileSync(location).toString());
 }
 
 
