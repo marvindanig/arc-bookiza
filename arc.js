@@ -1,17 +1,19 @@
-const fs = require('fs');
-const chalk = require('chalk');
+'use strong';
+
+const fs = require('graceful-fs');
 
 module.exports = {
     read(location) {
-        fs.readFile(location, function read(err, data) {
-            if (err) {
-                console.log(chalk.bold.red("Unregistered client"));
-                console.log(chalk.bold.cyan("Try $ bookiza register --help"));
-                process.exit(1);
-            }
-            return JSON.parse(data.toString());
+        return new Promise((resolve, reject) => {
+            fs.readFile(location, (err, data) => {
+                if (err) {
+                    let msg = 
+                      { "error": "Unregistered client", "help": "Try $ bookiza register --help" };
+                    reject(new Error(msg));
+                }
+                return JSON.parse(resolve(data).toString());
+            });
         });
-
         // return JSON.parse(fs.readFileSync(location).toString());
     },
 
