@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 
-export default {
+module.export = {
   read(location) {
     return JSON.parse(fs.readFileSync(location).toString());
   },
