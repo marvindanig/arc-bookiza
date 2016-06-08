@@ -6,8 +6,8 @@ module.exports = {
     return JSON.parse(fs.readFileSync(location).toString());
   },
 
-  write: function(location) {
-    fs.writeFileSync(location, JSON.stringify(bookizArc, null, 2));
+  write: function(location, arc) {
+    fs.writeFileSync(location, JSON.stringify(arc, null, 2));
     return;
   }
 };
