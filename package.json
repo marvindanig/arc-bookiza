@@ -1,6 +1,6 @@
 {
   "name": "arc-bookiza",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Returns the arc object to register and connect bookiza",
   "main": "arc.js",
   "repository": {
