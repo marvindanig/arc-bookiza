@@ -1,9 +1,13 @@
-function arc(location){
-  const path = require('path');
-  const fs = require('fs');
+const path = require('path');
+const fs = require('fs');
 
-  return JSON.parse(fs.readFileSync(location).toString());
-}
+module.exports = {
+  read: function(location) {
+    return JSON.parse(fs.readFileSync(location).toString());
+  },
 
-
-module.exports.arc = arc;
+  write: function(location) {
+    fs.writeFileSync(location, JSON.stringify(bookizArc, null, 2));
+    return;
+  }
+};
