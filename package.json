@@ -1,0 +1,16 @@
+{
+  "name": "arc-bookiza",
+  "version": "1.0.0",
+  "description": "Returns the arc object to register and connect bookiza",
+  "main": "arc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/marvindanig/arc-bookiza.git"
+  },  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Marvin Danig <marvin@bubbl.in> (https://bubbl.in/marvin)",
+  "license": "MIT",
+}
