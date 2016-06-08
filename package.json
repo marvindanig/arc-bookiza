@@ -1,6 +1,6 @@
 {
   "name": "arc-bookiza",
-  "version": "1.0.7",
+  "version": "0.0.7",
   "description": "Returns the arc object to register and connect bookiza",
   "main": "arc.js",
   "repository": {
@@ -12,5 +12,8 @@
   },
   "keywords": [],
   "author": "Marvin Danig <marvin@bubbl.in> (https://bubbl.in/marvin)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "1.1.3"
+  }
 }

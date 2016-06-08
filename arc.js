@@ -1,4 +1,5 @@
 const fs = require('fs');
+const chalk = require('chalk');
 
 module.exports = {
     read(location) {
@@ -6,6 +7,7 @@ module.exports = {
             if (err) {
                 console.log(chalk.bold.red("Unregistered client"));
                 console.log(chalk.bold.cyan("Try $ bookiza register --help"));
+                process.exit(1);
             }
             return JSON.parse(data.toString());
         });
