@@ -11,7 +11,7 @@ module.exports = {
                       { "error": "Unregistered client", "help": "Try $ bookiza register --help" };
                     reject(new Error(msg));
                 }
-                return JSON.parse(resolve(data));
+                return resolve(data);
             });
         });
         // return JSON.parse(fs.readFileSync(location).toString());
