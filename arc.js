@@ -1,12 +1,17 @@
-const fs = require('fs');
+function read(location) {
+    'use strong';
 
-module.exports = {
-  read(location) {
-    return JSON.parse(fs.readFileSync(location).toString());
-  },
+    const fs = require('graceful-fs');
 
-  write(location, arc) {
-    fs.writeFileSync(location, JSON.stringify(arc, null, 2));
-    return;
-  }
-};
+    return new Promise((resolve, reject) => {
+        fs.readFile(location, (err, data) => {
+            if (err) {
+                let msg = 'Did not find the arc!';
+                reject(new Error(msg));
+            }
+            return resolve(data);
+        });
+    });
+}
+
+module.exports.read = read;
